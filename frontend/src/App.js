@@ -42,6 +42,7 @@ import ProductReviews from "./component/Admin/ProductReviews";
 import Contact from "./component/layout/Contact/Contact";
 import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
+import ResponsiveAppBar from "./component/layout/Header/ResponsiveAppBar.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -70,7 +71,8 @@ function App() {
 
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+      <ResponsiveAppBar />
 
       {isAuthenticated && <UserOptions user={user} />}
 
