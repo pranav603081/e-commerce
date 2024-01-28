@@ -9,6 +9,7 @@ import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
 import MetaData from "../layout/MetaData";
 import LaunchIcon from "@material-ui/icons/Launch";
+import Header from "../layout/Header/Header";
 
 const MyOrders = () => {
   const dispatch = useDispatch();
@@ -87,6 +88,7 @@ const MyOrders = () => {
 
   return (
     <Fragment>
+      <Header />
       <MetaData title={`${user.name} - Orders`} />
 
       {loading ? (
